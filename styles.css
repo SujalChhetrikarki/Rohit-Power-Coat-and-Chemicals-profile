@@ -27,11 +27,52 @@
       }
 
       body {
+        position: relative;
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background: #f2f2ee;
+        background: linear-gradient(135deg, #f4f2ef 0%, #f8f4ea 40%, #eef4f7 100%);
+        background-size: 200% 200%;
         color: var(--text);
         line-height: 1.7;
+        overflow-x: hidden;
+        animation: softShift 18s ease-in-out infinite alternate;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: -20%;
+        background:
+          radial-gradient(circle at 18% 22%, rgba(247, 181, 0, 0.18), transparent 22%),
+          radial-gradient(circle at 82% 16%, rgba(11, 79, 131, 0.12), transparent 24%),
+          radial-gradient(circle at 60% 76%, rgba(245, 125, 42, 0.12), transparent 26%);
+        filter: blur(18px);
+        pointer-events: none;
+        z-index: 0;
+        animation: floatGlow 22s ease-in-out infinite alternate;
+      }
+
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      @keyframes softShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+      @keyframes floatGlow {
+        0% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        100% {
+          transform: translate3d(2%, -2%, 0) scale(1.08);
+        }
       }
 
       img {
