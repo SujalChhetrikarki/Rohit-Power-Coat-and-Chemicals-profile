@@ -183,7 +183,7 @@
       }
 
       .brand-mark {
-        width: 44px;
+        width: 56px;
         height: auto;
         display: block;
         object-fit: contain;
@@ -937,6 +937,14 @@
           align-items: center;
           justify-content: center;
           position: relative;
+          background: rgba(247, 181, 0, 0.14);
+          border: 1px solid rgba(247, 181, 0, 0.35);
+        }
+
+        .menu-toggle span,
+        .menu-toggle span::before,
+        .menu-toggle span::after {
+          background: #f7b500;
         }
 
         .nav {
@@ -949,8 +957,8 @@
           align-items: flex-start;
           gap: 18px;
           padding: 18px 18px 20px;
-          background: rgba(255, 255, 255, 0.96);
-          border: 1px solid var(--line);
+          background: rgba(8, 16, 22, 0.98);
+          border: 1px solid rgba(247, 181, 0, 0.25);
           border-radius: 16px;
           box-shadow: var(--shadow);
         }
@@ -962,6 +970,7 @@
         .nav a {
           width: 100%;
           font-size: 0.76rem;
+          color: #f7f1dc;
         }
 
         .about-grid,
