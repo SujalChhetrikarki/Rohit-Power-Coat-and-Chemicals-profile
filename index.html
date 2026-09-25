@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ROHIT POWDER COAT AND CHEMICALS PRIVATE LIMITED provides professional powder coating solutions, surface preparation, and a range of powder coating products and finishes."
+    />
+    <title>Rohit Powder Coat and Chemicals Private Limited</title>
+    <style>
+      :root {
+        --bg: #f7f7f4;
+        --panel: #ffffff;
+        --panel-alt: #f1f4f7;
+        --text: #0f1720;
+        --text-soft: #42515e;
+        --muted: #667684;
+        --line: #dfe7ed;
+        --accent: #0b4f83;
+        --accent-deep: #0b3d63;
+        --accent-soft: rgba(11, 79, 131, 0.12);
+        --orange: #f57d2a;
+        --orange-deep: #e96b1f;
+        --dark: #111517;
+        --shadow: 0 18px 40px rgba(11, 61, 99, 0.08);
+        --radius: 18px;
+        --container: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 96px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 32px;
+        height: 1px;
+        background: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0 0 16px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 5vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+      }
+
+      h3 {
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        color: var(--text-soft);
+        font-size: 1.05rem;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(12px);
+        background: rgba(245, 245, 242, 0.88);
+        border-bottom: 1px solid rgba(17, 21, 23, 0.05);
+      }
+
+      .nav-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 74px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+        letter-spacing: 0.02em;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--orange) 100%);
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 900;
+        box-shadow: 0 8px 18px rgba(11, 79, 131, 0.18);
+      }
+
+      .brand-text {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent-deep);
+      }
+
+      .brand-text .highlight {
+        color: var(--orange);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav a {
+        position: relative;
+        font-size: 0.82rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--text-soft);
+        transition: color 0.2s ease;
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 100%;
+        height: 2px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.2s ease;
+      }
+
+      .nav a:hover,
+      .nav a:focus-visible {
+        color: var(--text);
+      }
+
+      .nav a:hover::after,
+      .nav a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 46px;
+        height: 46px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+        cursor: pointer;
+      }
+
+      .menu-toggle span,
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        position: absolute;
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 2px;
+      }
+
+      .menu-toggle span {
+        position: relative;
+        margin: 0 auto;
+      }
+
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        content: "";
+        left: 0;
+      }
+
+      .menu-toggle span::before {
+        top: -6px;
+      }
+
+      .menu-toggle span::after {
+        top: 6px;
+      }
+
+      .hero {
+        padding: 72px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 38px;
+        align-items: center;
+      }
+
+      .hero-copy {
+        max-width: 650px;
+      }
+
+      .logo-banner {
+        margin-bottom: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(11, 79, 131, 0.08), rgba(245, 125, 42, 0.08));
+        border: 1px solid rgba(11, 79, 131, 0.14);
+      }
+
+      .logo-banner .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--orange) 100%);
+        box-shadow: 0 10px 22px rgba(11, 79, 131, 0.15);
+      }
+
+      .logo-banner .brand-text {
+        font-size: 0.8rem;
+        letter-spacing: 0.16em;
+      }
+
+      .lead {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 9px 14px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        border: 1px solid rgba(11, 79, 131, 0.14);
+        font-size: 0.73rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        color: var(--text-soft);
+        max-width: 600px;
+      }
+
+      .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 22px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-1px);
+      }
+
+      .button-primary {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--orange) 100%);
+        color: #fff;
+        box-shadow: 0 12px 30px rgba(11, 79, 131, 0.18);
+      }
+
+      .button-secondary {
+        background: transparent;
+        color: var(--text);
+        border-color: var(--line);
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 28px;
+        color: var(--text-soft);
+        font-size: 0.93rem;
+      }
+
+      .hero-meta strong {
+        color: var(--text);
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 480px;
+      }
+
+      .visual-card {
+        position: absolute;
+        inset: 18px 0 0 30px;
+        background: linear-gradient(180deg, #eef2ef 0%, #f8f9f7 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .visual-badge {
+        position: absolute;
+        right: 28px;
+        top: 24px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px 16px;
+        box-shadow: 0 16px 24px rgba(17, 21, 23, 0.08);
+      }
+
+      .visual-badge span {
+        display: block;
+        font-size: 0.68rem;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+
+      .visual-badge strong {
+        display: block;
+        font-size: 1.2rem;
+        letter-spacing: -0.03em;
+      }
+
+      .visual-grid {
+        position: absolute;
+        inset: 88px 30px 30px 30px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 16px;
+      }
+
+      .mini-panel {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 18px 18px 14px;
+      }
+
+      .mini-panel small {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .mini-panel strong {
+        display: block;
+        font-size: 1.7rem;
+        letter-spacing: -0.05em;
+      }
+
+      .mini-panel span {
+        color: var(--text-soft);
+        font-size: 0.85rem;
+      }
+
+      .website-link {
+        margin-top: 16px;
+        display: inline-block;
+        font-size: 1rem;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .about-grid,
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 30px;
+      }
+
+      .info-card,
+      .contact-box {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .info-card {
+        padding: 30px;
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .feature-item {
+        padding: 18px 18px 16px;
+        background: var(--panel-alt);
+        border-radius: 14px;
+        border: 1px solid var(--line);
+      }
+
+      .feature-item strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.04rem;
+      }
+
+      .feature-item span {
+        color: var(--text-soft);
+        font-size: 0.92rem;
+      }
+
+      .company-summary {
+        display: grid;
+        gap: 18px;
+      }
+
+      .company-summary .stat {
+        padding: 22px 18px 18px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: var(--panel-alt);
+      }
+
+      .company-summary .stat small {
+        display: block;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        margin-bottom: 10px;
+        font-size: 0.68rem;
+      }
+
+      .company-summary .stat strong {
+        font-size: 1.14rem;
+        letter-spacing: -0.02em;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .product-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 24px 20px 18px;
+        box-shadow: 0 16px 32px rgba(17, 21, 23, 0.04);
+      }
+
+      .product-icon {
+        width: 52px;
+        height: 52px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        margin-bottom: 18px;
+      }
+
+      .product-card p {
+        margin-bottom: 18px;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 14px 0 18px;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: var(--panel-alt);
+        border: 1px solid var(--line);
+        color: var(--text-soft);
+        font-size: 0.71rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .inline-link {
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .advantage-item {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 16px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+      }
+
+      .advantage-number {
+        flex-shrink: 0;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+
+      .process-card {
+        position: relative;
+        padding: 22px 18px 18px;
+        border-radius: 18px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .process-step {
+        color: var(--accent);
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+        margin-bottom: 12px;
+      }
+
+      .process-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .process-card p {
+        margin-bottom: 0;
+        font-size: 0.96rem;
+      }
+
+      .table-wrap {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead th {
+        text-align: left;
+        background: var(--panel-alt);
+        color: var(--text);
+        padding: 18px 20px;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      tbody td {
+        padding: 18px 20px;
+        border-top: 1px solid var(--line);
+        color: var(--text-soft);
+      }
+
+      tbody tr:nth-child(even) {
+        background: rgba(240, 242, 238, 0.35);
+      }
+
+      .shade-blocks {
+        display: grid;
+        gap: 24px;
+      }
+
+      .shade-group {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .shade-group h3 {
+        margin-bottom: 18px;
+      }
+
+      .shade-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .shade-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 62px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: linear-gradient(180deg, #fcfcfb 0%, #f3f6f4 100%);
+      }
+
+      .shade-swatch {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid rgba(17, 21, 23, 0.1);
+        background: linear-gradient(135deg, #d9d6d0 0%, #b7b3ae 100%);
+        flex-shrink: 0;
+      }
+
+      .shade-card span {
+        color: var(--text-soft);
+        font-size: 0.92rem;
+      }
+
+      .contact-box {
+        padding: 28px;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .contact-item {
+        padding: 16px 18px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--panel-alt);
+      }
+
+      .contact-item small {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.68rem;
+      }
+
+      .contact-item a,
+      .contact-item span {
+        color: var(--text);
+        font-size: 1rem;
+      }
+
+      form {
+        display: grid;
+        gap: 16px;
+      }
+
+      .field-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        color: var(--text-soft);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 15px;
+        background: #fff;
+        color: var(--text);
+        resize: vertical;
+        min-height: 52px;
+      }
+
+      textarea {
+        min-height: 140px;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: 2px solid rgba(29, 77, 79, 0.12);
+        border-color: rgba(29, 77, 79, 0.35);
+      }
+
+      .success-msg {
+        display: none;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: rgba(29, 77, 79, 0.08);
+        color: var(--accent);
+        border: 1px solid rgba(29, 77, 79, 0.15);
+        font-weight: 700;
+      }
+
+      footer {
+        padding: 30px 0 42px;
+        border-top: 1px solid var(--line);
+        background: #f0f2ee;
+      }
+
+      .footer-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      .footer-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: var(--text-soft);
+        font-size: 0.9rem;
+      }
+
+      .copyright {
+        width: 100%;
+        margin-top: 18px;
+        color: var(--text-soft);
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .about-grid,
+        .contact-grid,
+        .product-grid,
+        .process-grid,
+        .shade-list {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .process-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .shade-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .nav {
+          position: absolute;
+          top: calc(100% + 10px);
+          left: 16px;
+          right: 16px;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 18px;
+          padding: 18px 18px 20px;
+          background: rgba(255, 255, 255, 0.96);
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          box-shadow: var(--shadow);
+        }
+
+        .nav.is-open {
+          display: flex;
+        }
+
+        .nav a {
+          width: 100%;
+          font-size: 0.76rem;
+        }
+
+        .about-grid,
+        .contact-grid,
+        .product-grid,
+        .process-grid,
+        .shade-list,
+        .advantages-grid,
+        .feature-list,
+        .field-row {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 52px;
+        }
+
+        .section {
+          padding: 72px 0;
+        }
+
+        .visual-card {
+          position: relative;
+          inset: auto;
+          min-height: 360px;
+        }
+
+        .hero-visual {
+          min-height: 320px;
+        }
+
+        .visual-grid {
+          inset: 90px 18px 18px 18px;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        thead {
+          display: none;
+        }
+
+        table,
+        tbody,
+        tr,
+        td {
+          display: block;
+          width: 100%;
+        }
+
+        tbody tr {
+          padding: 10px 0;
+        }
+
+        tbody td {
+          border-top: none;
+          border-bottom: 1px solid var(--line);
+          padding: 10px 18px;
+        }
+
+        tbody td::before {
+          content: attr(data-label);
+          display: block;
+          margin-bottom: 4px;
+          color: var(--text);
+          font-size: 0.72rem;
+          letter-spacing: 0.09em;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="Rohit Powder Coat and Chemicals home">
+          <span class="brand-mark">R</span>
+          <span class="brand-text">ROHIT <span class="highlight">POWDER COAT</span> &amp; CHEMICALS</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+        </button>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#powder-coating">Powder Coating</a>
+          <a href="#shades">Shades</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="logo-banner" aria-label="Rohit Powder Coat and Chemicals logo">
+              <span class="brand-mark">R</span>
+              <span class="brand-text">ROHIT <span class="highlight">POWDER COAT</span> &amp; CHEMICALS</span>
+            </div>
+            <span class="lead">ROHIT POWDER COAT AND CHEMICALS PRIVATE LIMITED</span>
+            <h1>Professional Powder Coating Solutions</h1>
+            <p class="hero-subtitle">
+              Rohit Powder Coat and Chemicals Private Limited manufactures and supplies powder coating products
+              designed for industrial and commercial applications. Our range includes powder coatings for
+              different finishes, performance requirements and applications, with an emphasis on durability,
+              surface protection and efficient coating solutions.
+            </p>
+
+            <div class="button-group">
+              <a class="button button-primary" href="#products">Explore Products</a>
+              <a class="button button-secondary" href="#contact">Contact Us</a>
+            </div>
+
+            <a class="website-link" href="http://www.rpcc.com.np" target="_blank" rel="noreferrer">www.rpcc.com.np</a>
+          </div>
+
+          <div class="hero-visual" aria-label="Company overview illustration">
+            <div class="visual-card">
+              <div class="visual-badge">
+                <span>Powder Coating</span>
+                <strong>Professional</strong>
+              </div>
+
+              <div class="visual-grid">
+                <div class="mini-panel">
+                  <small>Finish</small>
+                  <strong>Matt</strong>
+                  <span>Classic surface effect</span>
+                </div>
+                <div class="mini-panel">
+                  <small>Process</small>
+                  <strong>Electrostatic</strong>
+                  <span>Uniform powder application</span>
+                </div>
+                <div class="mini-panel">
+                  <small>Performance</small>
+                  <strong>Durable</strong>
+                  <span>Outdoor and indoor use</span>
+                </div>
+                <div class="mini-panel">
+                  <small>Protection</small>
+                  <strong>Resistant</strong>
+                  <span>Scratch and corrosion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <span class="eyebrow">Company Profile</span>
+          <div class="about-grid" style="margin-top: 26px;">
+            <div>
+              <h2>Powder coating products for modern industrial applications</h2>
+              <p>
+                ROHIT POWDER COAT AND CHEMICALS PRIVATE LIMITED offers a range of powder coating materials and
+                solutions designed to protect and enhance metal substrates. Our product range includes epoxy,
+                epoxy polyester / hybrid, pure polyester and super durable polyester formulations to suit
+                different finishing requirements, application needs and environmental conditions.
+              </p>
+              <p>
+                These powder coating systems are selected to deliver specific performance attributes such as corrosion
+                resistance, toughness, flexibility, durability, color retention and finish variety, with products
+                suitable for indoor and outdoor applications.
+              </p>
+            </div>
+
+            <div class="company-summary">
+              <div class="stat">
+                <small>Core focus</small>
+                <strong>Powder coating materials and finish systems</strong>
+              </div>
+              <div class="stat">
+                <small>Application profile</small>
+                <strong>Industrial, commercial and metal-based surfaces</strong>
+              </div>
+              <div class="stat">
+                <small>Finish range</small>
+                <strong>Glossy, semi glossy, texture, structure and matt</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <span class="eyebrow">Products</span>
+          <h2 style="margin-top: 18px; margin-bottom: 26px;">Powder coating systems</h2>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-icon">PE</div>
+              <h3>Pure Epoxy</h3>
+              <p>Based on epoxy resin, this coating offers a matt finish with excellent corrosion resistance, toughness and flexibility, and is generally used for indoor applications.</p>
+              <div class="tag-list">
+                <span class="tag">Matt Finish</span>
+                <span class="tag">Indoor</span>
+              </div>
+              <a href="#powder-coating" class="inline-link">Learn More</a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-icon">EP</div>
+              <h3>Epoxy Polyester / Hybrid</h3>
+              <p>Commonly applied coating suitable where less sunlight is present. Available in Glossy, Semi Glossy, Texture and Structure finish.</p>
+              <div class="tag-list">
+                <span class="tag">Hybrid</span>
+                <span class="tag">Glossy</span>
+                <span class="tag">Semi Glossy</span>
+              </div>
+              <a href="#shades" class="inline-link">Learn More</a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-icon">PP</div>
+              <h3>Pure Polyester</h3>
+              <p>Designed for outdoor uses with good color retention, excellent durability, heat resistance, flow and mechanical properties. Available in Glossy and Semi Glossy finish.</p>
+              <div class="tag-list">
+                <span class="tag">Outdoor</span>
+                <span class="tag">Glossy</span>
+              </div>
+              <a href="#powder-coating" class="inline-link">Learn More</a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-icon">SD</div>
+              <h3>Super Durable Polyester</h3>
+              <p>Based on super durable polyester and generally used for exterior aluminum and metal sections, with better color retention and more than ten years outdoor durability.</p>
+              <div class="tag-list">
+                <span class="tag">Exterior</span>
+                <span class="tag">10+ Years</span>
+              </div>
+              <a href="#powder-coating" class="inline-link">Learn More</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="advantages">
+        <div class="container">
+          <span class="eyebrow">Advantages</span>
+          <h2 style="margin-top: 18px; margin-bottom: 18px;">Advantages of Powder Coating</h2>
+
+          <div class="advantages-grid">
+            <div class="advantage-item">
+              <div class="advantage-number">01</div>
+              <div>
+                <h3>Cost effective</h3>
+                <p>Cost effective compared to liquid paint.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-number">02</div>
+              <div>
+                <h3>Environment friendly</h3>
+                <p>Environment friendly compared to liquid paint.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-number">03</div>
+              <div>
+                <h3>Safer application</h3>
+                <p>No health hazards.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-number">04</div>
+              <div>
+                <h3>High resistance</h3>
+                <p>High resistance to scratching, chipping and marking.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-number">05</div>
+              <div>
+                <h3>Design flexibility</h3>
+                <p>Wide range of special effects.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-number">06</div>
+              <div>
+                <h3>Recyclable overspray</h3>
+                <p>Overspray can be recycled.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-number">07</div>
+              <div>
+                <h3>Efficient use</h3>
+                <p>Nearly 100% use of coating is possible.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-number">08</div>
+              <div>
+                <h3>Thicker film capability</h3>
+                <p>Thicker coatings can be produced without running or sagging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="powder-coating">
+        <div class="container">
+          <span class="eyebrow">Powder Coating</span>
+          <h2 style="margin-top: 18px; margin-bottom: 18px;">What is Powder Coating?</h2>
+          <p>
+            Powder coating is a dry coating, applied as a free-flowing dry powder. It does not require a solvent to
+            keep the binder or filler in liquid suspension. The powder is applied electrostatically and then cured
+            under heat, creating a hard and smooth finish. It is mainly used for metal substrates.
+          </p>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <div class="process-step">01</div>
+              <h3>Surface Preparation</h3>
+              <p>Phosphating, chromotising and sand blasting as applicable.</p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-step">02</div>
+              <h3>Powder Application</h3>
+              <p>Electrostatic application of powder to the grounded metal substrate.</p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-step">03</div>
+              <h3>Curing</h3>
+              <p>The coated part is placed into a curing oven.</p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-step">04</div>
+              <h3>Finished Coating</h3>
+              <p>A hard and smooth protective finish is formed.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="curing">
+        <div class="container">
+          <span class="eyebrow">Curing Schedule</span>
+          <h2 style="margin-top: 18px; margin-bottom: 18px;">Recommended curing conditions</h2>
+
+          <div class="table-wrap">
+            <table aria-label="Curing schedule table">
+              <thead>
+                <tr>
+                  <th>Product / Finish</th>
+                  <th>Curing Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Product / Finish">Matt Finish</td>
+                  <td data-label="Curing Schedule">190°C for 15 min</td>
+                </tr>
+                <tr>
+                  <td data-label="Product / Finish">Glossy Finish</td>
+                  <td data-label="Curing Schedule">180°C for 10 min</td>
+                </tr>
+                <tr>
+                  <td data-label="Product / Finish">Semi Glossy</td>
+                  <td data-label="Curing Schedule">180°C for 10 min</td>
+                </tr>
+                <tr>
+                  <td data-label="Product / Finish">Structure Finish</td>
+                  <td data-label="Curing Schedule">180°C for 10 min</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="shades">
+        <div class="container">
+          <span class="eyebrow">Shades &amp; Finishes</span>
+          <h2 style="margin-top: 18px; margin-bottom: 18px;">Available shades &amp; finishes</h2>
+
+          <div class="shade-blocks">
+            <div class="shade-group">
+              <h3>Glossy / Semi Glossy</h3>
+              <div class="shade-list">
+                <div class="shade-card"><span class="shade-swatch"></span><span>RAL 9002 Glossy</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Black Gloss (S)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Ivory Glossy EBCO Fusion</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Clear Glossy</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Bucket White Glossy (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Brown Glossy Super (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>RAL 9002 Semi Glossy (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>SKY Blue Glossy (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Coffee Brown Semi Glossy (H)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Parrot Green Glossy (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Coffee Brown Semi Glossy (KB)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Rusine Pink Glossy (Rapid)</span></div>
+              </div>
+            </div>
+
+            <div class="shade-group">
+              <h3>Structure</h3>
+              <div class="shade-list">
+                <div class="shade-card"><span class="shade-swatch"></span><span>RAL 7035 Structure (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Ultra Blue Structure (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>RAL 70323 Structure (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>RAL 9002 Structure (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Orange Structure (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>RAL3020 Structure (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Maroon Fine Structure - 2 (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Magenta Pink Structure (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Aqua Blue Fine Structure (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Black Structure (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Peacock Blue Fine Structure (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Smoke Grey Structure SG (Fusion)</span></div>
+              </div>
+            </div>
+
+            <div class="shade-group">
+              <h3>Texture / Matt</h3>
+              <div class="shade-list">
+                <div class="shade-card"><span class="shade-swatch"></span><span>Ivory Texture (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Brown Texture (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Black Texture (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Parrot Green Texture (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Ultra Blue Texture (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Brown Texture (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Graphic Grey Texture (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Black Super (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Suhuco Grey Texture</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Ivory Matt</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>DA Grey Texture</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Black Matt</span></div>
+              </div>
+            </div>
+
+            <div class="shade-group">
+              <h3>Special / Metallic</h3>
+              <div class="shade-list">
+                <div class="shade-card"><span class="shade-swatch"></span><span>Leatherite Super (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Leatherite Brown (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Leatherite Blue (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Leatherite Marron (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Leatherite Red (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Leatherite Black (Fusion)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Maroon Aligator (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Met. Silver Mirror (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Grey Aligator (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Met. Sparble Gold (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Met. Aligator Silver Bold (Rapid)</span></div>
+                <div class="shade-card"><span class="shade-swatch"></span><span>Met. Rose Gold (Rapid)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <span class="eyebrow">Contact</span>
+          <h2 style="margin-top: 18px; margin-bottom: 24px;">Get in touch</h2>
+
+          <div class="contact-grid">
+            <div class="contact-box">
+              <h3>ROHIT POWDER COAT AND CHEMICALS PRIVATE LIMITED</h3>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <small>Website</small>
+                  <a href="http://www.rpcc.com.np" target="_blank" rel="noreferrer">www.rpcc.com.np</a>
+                </div>
+                <div class="contact-item">
+                  <small>Email</small>
+                  <a href="mailto:rpccpltd@gmail.com">rpccpltd@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                  <small>Phone</small>
+                  <span>009779855022709</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <form id="contactForm" action="mailto:rpccpltd@gmail.com" method="post" enctype="text/plain">
+                <div class="field-row">
+                  <label>
+                    Name
+                    <input type="text" name="name" placeholder="Your name" required />
+                  </label>
+                  <label>
+                    Email
+                    <input type="email" name="email" placeholder="Your email" required />
+                  </label>
+                </div>
+
+                <label>
+                  Phone
+                  <input type="tel" name="phone" placeholder="Your phone" required />
+                </label>
+
+                <label>
+                  Message
+                  <textarea name="message" placeholder="Write your inquiry" required></textarea>
+                </label>
+
+                <button class="button button-primary" type="submit">Send Inquiry</button>
+                <div class="success-msg" id="successMessage">Your inquiry has been prepared successfully.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-wrap">
+          <div>
+            <div class="footer-brand">ROHIT POWDER COAT AND CHEMICALS PRIVATE LIMITED</div>
+            <div style="margin-top: 8px; color: var(--text-soft); font-weight: 700;">Professional Powder Coating Solutions</div>
+          </div>
+
+          <div class="footer-meta">
+            <a href="http://www.rpcc.com.np" target="_blank" rel="noreferrer">Website: www.rpcc.com.np</a>
+            <a href="mailto:rpccpltd@gmail.com">Email: rpccpltd@gmail.com</a>
+            <span>Phone: 009779855022709</span>
+          </div>
+        </div>
+
+        <div class="copyright">© 2026 Rohit Powder Coat and Chemicals Private Limited. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav');
+
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('is-open');
+        });
+
+        nav.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('is-open');
+          });
+        });
+      }
+
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('successMessage');
+
+      if (form && success) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          success.style.display = 'block';
+          form.reset();
+        });
+      }
+    </script>
+  </body>
+</html>
