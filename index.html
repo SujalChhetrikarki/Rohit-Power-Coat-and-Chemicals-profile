@@ -1390,13 +1390,13 @@
                 </div>
                 <div class="contact-item">
                   <small>Phone</small>
-                  <span>009779855022709</span>
+                  <a href="https://wa.me/9779845808198?text=Hello%20Rohit%20Powder%20Coat%20and%20Chemicals%20Private%20Limited%2C%20I%20would%20like%20to%20send%20an%20enquiry." target="_blank" rel="noopener noreferrer">+977 9845808198</a>
                 </div>
               </div>
             </div>
 
             <div class="contact-box">
-              <form id="contactForm" action="mailto:rpccpltd@gmail.com" method="post" enctype="text/plain">
+              <form id="contactForm" action="https://wa.me/9779845808198" method="get" target="_blank">
                 <div class="field-row">
                   <label>
                     Name
@@ -1438,7 +1438,7 @@
           <div class="footer-meta">
             <a href="http://www.rpcc.com.np" target="_blank" rel="noreferrer">Website: www.rpcc.com.np</a>
             <a href="mailto:rpccpltd@gmail.com">Email: rpccpltd@gmail.com</a>
-            <span>Phone: 009779855022709</span>
+            <a href="https://wa.me/9779845808198?text=Hello%20Rohit%20Powder%20Coat%20and%20Chemicals%20Private%20Limited%2C%20I%20would%20like%20to%20send%20an%20enquiry." target="_blank" rel="noopener noreferrer">Phone: +977 9845808198</a>
           </div>
         </div>
 
@@ -1471,6 +1471,21 @@
       if (form && success) {
         form.addEventListener('submit', function (event) {
           event.preventDefault();
+
+          const formData = new FormData(form);
+          const name = (formData.get('name') || '').toString().trim();
+          const email = (formData.get('email') || '').toString().trim();
+          const phone = (formData.get('phone') || '').toString().trim();
+          const message = (formData.get('message') || '').toString().trim();
+
+          const whatsappMessage = encodeURIComponent(
+            `Hello Rohit Powder Coat and Chemicals Private Limited, I would like to send an enquiry.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
+          );
+
+          const whatsappUrl = `https://wa.me/9779845808198?text=${whatsappMessage}`;
+          window.open(whatsappUrl, '_blank');
+
+          success.textContent = 'Your inquiry has been prepared in WhatsApp.';
           success.style.display = 'block';
           form.reset();
         });
