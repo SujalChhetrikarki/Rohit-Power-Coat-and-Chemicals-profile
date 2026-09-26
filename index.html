@@ -9,6 +9,26 @@
       content="ROHIT POWDER COAT AND CHEMICALS PRIVATE LIMITED provides professional powder coating solutions, surface preparation, and a range of powder coating products and finishes."
     />
     <title>Rohit Powder Coat and Chemicals Private Limited</title>
+    <script>
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+
+      document.addEventListener('click', function (event) {
+        const link = event.target.closest('a[href^="#"]');
+        if (!link) return;
+
+        const targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+        if (!target) return;
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      });
+    </script>
     <link rel="icon" type="image/png" href="assets/Rohit.png" sizes="128x128" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>

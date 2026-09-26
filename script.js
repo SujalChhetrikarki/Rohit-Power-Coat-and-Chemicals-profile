@@ -1,4 +1,25 @@
 
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.location.hash) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+
+        document.addEventListener('click', (event) => {
+          const link = event.target.closest('a[href^="#"]');
+          if (!link) return;
+
+          const targetId = link.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+
+          const target = document.querySelector(targetId);
+          if (!target) return;
+
+          event.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        });
+      });
+
       const toggle = document.querySelector('.menu-toggle');
       const nav = document.querySelector('.nav');
 
