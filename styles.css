@@ -385,6 +385,35 @@
         border-color: rgba(255, 255, 255, 0.3);
       }
 
+      .footer-credit {
+        margin-top: 12px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+
+      .footer-credit span,
+      .footer-credit a {
+        color: #f7b500;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+      }
+
+      .footer-credit a {
+        text-decoration: none;
+        opacity: 0.9;
+        transition: opacity 0.2s ease;
+      }
+
+      .footer-credit a:hover,
+      .footer-credit a:focus-visible {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
       .hero-meta {
         display: flex;
         flex-wrap: wrap;
@@ -1004,6 +1033,11 @@
 
         .visual-grid {
           inset: 90px 18px 18px 18px;
+        }
+
+        .button-group {
+          flex-direction: column;
+          width: 100%;
         }
 
         .button {
