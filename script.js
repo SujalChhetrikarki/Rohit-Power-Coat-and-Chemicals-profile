@@ -55,7 +55,7 @@
             `Hello Rohit Powder Coat and Chemicals Private Limited, I would like to send an enquiry.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
           );
 
-          const whatsappUrl = `https://wa.me/9779855022709?text=${whatsappMessage}`;
+          const whatsappUrl = `https://wa.me/919851120211?text=${whatsappMessage}`;
           window.open(whatsappUrl, '_blank');
 
           success.textContent = 'Your inquiry has been prepared in WhatsApp.';
