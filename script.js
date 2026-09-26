@@ -20,20 +20,23 @@
         });
       });
 
-      const toggle = document.querySelector('.menu-toggle');
+      const toggle = document.querySelector('.mobile-menu-button');
       const nav = document.querySelector('.nav');
 
       if (toggle && nav) {
+        const setMenuState = (isOpen) => {
+          toggle.setAttribute('aria-expanded', String(isOpen));
+          nav.classList.toggle('is-open', isOpen);
+        };
+
         toggle.addEventListener('click', () => {
           const expanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', String(!expanded));
-          nav.classList.toggle('is-open');
+          setMenuState(!expanded);
         });
 
         nav.querySelectorAll('a').forEach((link) => {
           link.addEventListener('click', () => {
-            toggle.setAttribute('aria-expanded', 'false');
-            nav.classList.remove('is-open');
+            setMenuState(false);
           });
         });
       }
