@@ -258,43 +258,42 @@
         transform: scaleX(1);
       }
 
-      .menu-toggle {
+      .mobile-menu-button {
         display: none;
+        position: relative;
         width: 46px;
         height: 46px;
         border: 1px solid var(--line);
         border-radius: 12px;
         background: var(--panel);
         cursor: pointer;
+        padding: 0;
       }
 
-      .menu-toggle span,
-      .menu-toggle span::before,
-      .menu-toggle span::after {
+      .hamburger-icon,
+      .hamburger-icon::before,
+      .hamburger-icon::after {
         position: absolute;
         display: block;
         width: 18px;
         height: 2px;
         background: var(--text);
         border-radius: 2px;
-      }
-
-      .menu-toggle span {
-        position: relative;
-        margin: 0 auto;
-      }
-
-      .menu-toggle span::before,
-      .menu-toggle span::after {
+        left: 50%;
+        transform: translateX(-50%);
         content: "";
-        left: 0;
       }
 
-      .menu-toggle span::before {
+      .hamburger-icon {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .hamburger-icon::before {
         top: -6px;
       }
 
-      .menu-toggle span::after {
+      .hamburger-icon::after {
         top: 6px;
       }
 
@@ -973,15 +972,12 @@
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 10px 16px;
+          width: 46px;
+          height: 46px;
+          padding: 0;
           border: 1px solid rgba(247, 181, 0, 0.4);
-          border-radius: 999px;
+          border-radius: 12px;
           background: linear-gradient(135deg, rgba(247, 181, 0, 0.16), rgba(11, 79, 131, 0.2));
-          color: #fff;
-          font-size: 0.72rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
           cursor: pointer;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -990,6 +986,12 @@
         .mobile-menu-button:focus-visible {
           transform: translateY(-1px);
           box-shadow: 0 10px 24px rgba(11, 79, 131, 0.22);
+        }
+
+        .hamburger-icon,
+        .hamburger-icon::before,
+        .hamburger-icon::after {
+          background: #fff;
         }
 
         .nav {
